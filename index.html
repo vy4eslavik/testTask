@@ -4,56 +4,114 @@
     <meta charset="utf-8"/>
     <title>Test Task</title>
 
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
     <link rel="stylesheet" href="style.css" />
+    <link href="media_queries.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
+
 </head>
 <body>
-    <section class="leftCol">
 
-        <img class="logo" width="100%" src="images/logo.jpg" alt="logo" />
+<aside class="leftCol">
 
-        <nav class="leftCol_menu">
-            <ul>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Whats New</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
+    <img class="logo" width="100%" src="images/logo.jpg" alt="logo"/>
 
-            <a href="#">Endorsements</a>
-        </nav>
+    <nav>
+        <ul class="leftCol_menu">
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li class="active">Whats New</li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Endorsements</a></li>
+        </ul>
+    </nav>
 
-        <div class="leftCol_footer">
-            <a href="#">About </a>
-            <a href="#">Contact</a>
+    <footer class="leftCol_footer">
+        <a class="pipeAfter" href="#">About </a>
+        <a href="#">Contact</a>
 
-            <div class="social">
-                <img src="images/twitter.jpg" alt="twitter" />
-                <img src="images/facebook.jpg" alt="facebook" />
-                <img src="images/youtube.jpg" alt="youtube" />
-                <img src="images/social.jpg" alt="social" />
-            </div>
+        <div class="social">
+            <img src="images/twitter.jpg" alt="twitter"/>
+            <img src="images/facebook.jpg" alt="facebook"/>
+            <img src="images/youtube.jpg" alt="youtube"/>
+            <img src="images/social.jpg" alt="social"/>
         </div>
-    </section>
+    </footer>
+</aside>
 
-    <section class="rightCol">
-        <header>
-            <section class="topCol">
+<section class="rightCol">
 
+    <header class="generalHeader">
+            <div class="spacer"></div>
+            <a class="pipeAfter" href="#">Stay in touch</a>
+            <a class="pipeAfter" href="#">Donate</a>
+
+            <input class="searchInput" type="search" placeholder="Search..."/>
+            <div class="searchIcon"></div>
+    </header>
+
+    <article class="generalArticle">
+            <nav>
+                <ul class="general_menu">
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li class="active">Whats New</li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Endorsements</a></li>
+                </ul>
+            </nav>
+
+        <section class="latest secondPost">
+            <img class="preview" src="images/secondarticle.jpg"/>
+            <article>
+            <h3>Latest Blog</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+            </article>
+        </section>
+
+        <section class="timeLine">
+            <div class="prev"></div>
+            <div class="first date"></div>
+            <div class="between"></div>
+            <div class="second date"></div>
+            <div class="between"></div>
+            <div class="third date"></div>
+        </section>
+
+        <div class="bottomCol">
+            <section class="latest firstPost">
+                <img class="preview" src="images/firstarticle.jpg"/>
+                <article>
+                <h3>Latest Article</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </article>
             </section>
-            <section class="botomCol">
 
+            <section class="latest thirdPost">
+                <article>
+                    <h3>Latest Video</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </article>
             </section>
-        </header>
+        </div>
+    </article>
 
-        <article>
+    <footer class="generalFooter">
 
-        </article>
+    </footer>
+</section>
 
-        <footer>
-
-        </footer>
-    </section>
 </body>
 </html>

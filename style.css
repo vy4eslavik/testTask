@@ -1,6 +1,6 @@
 /* general start */
 html{
-    height: 99%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -17,81 +17,219 @@ a{
 a:hover{
     text-decoration: underline;
 }
+h3{
+    font-size: 22pt;
+    margin: auto auto 10px auto;
+}
+.pipeAfter:after{
+    margin: 0 20px 0 20px;
+    width: 1px;
+    height: 22px;
+    content: " ";
+    border-left: 1px solid #656565;
+}
+.searchIcon{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    background: url("images/search.png") no-repeat left;
+}
+.searchIcon:hover{
+    background-position: right;
+    cursor: pointer;
+}
+.searchInput{
+    height: 15px;
+    width: 150px;
+    padding-left: 5px;
+    font-family: inherit;
+    font-size: 11pt;
+    color: inherit;
+    border-radius: 10px;
+    border: 0;
+    background: #363636;
+}
+nav ul{
+    padding: 0;
+}
+nav ul li{
+    list-style-type: none;
+}
 /* general end */
 
 /* left Col start */
 .leftCol{
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
+    float: left;
     width: 15%;
     height: 100%;
     background: #fff;
 }
 .leftCol .logo{
-    margin-top: 25%;
+    margin-top: 30%;
 }
 .leftCol .leftCol_menu{
-    height: 45%;
-    margin-top: 60px;
-    color: #9c9c9c;
+    margin-top: 25%;
+    color: #818286;
     font-size: 12pt;
 }
-.leftCol .leftCol_menu ul{
-    padding: 0;
-    margin: 0 0 100px 0;
+.leftCol .leftCol_menu li{
+    margin-top: 8%;
 }
-.leftCol .leftCol_menu ul li{
-    list-style-type: none;
-    line-height: 35px;
+.leftCol .leftCol_menu li:last-of-type{
+    margin-top: 40%;
+}
+.leftCol_menu .active{
+    text-decoration: underline;
 }
 .leftCol .leftCol_footer{
-    margin-top: 20px;
+    margin-top: 40%;
     font-size: 14pt;
-    color: #5b5b5b;
-}
-.leftCol .leftCol_footer a:first-of-type:after{
-    margin: 0 5px 0 5px;
-    content: "|";
-}
-.leftCol .social{
-    white-space: nowrap;
-    margin-top: 15px;
+    color: #252525;
 }
 .leftCol .social img{
     display: inline-block;
-    margin-right: 5px;
+    margin: 15px 5px 0 0;
 }
 /* left Col end */
 
 /* ----------- right Col start ----------- */
 
 .rightCol{
-    position: relative;
-    display: inline-block;
-    width: 84%;
+    width: 100%;
     height: 100%;
+
+    background: #d5d5d5; /* Old browsers */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d5d5d5), color-stop(100%,#a9a9a9)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #d5d5d5 0%,#a9a9a9 100%); /* Chrome10+,Safari5.1+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #d5d5d5 0%,#a9a9a9 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #d5d5d5 0%,#a9a9a9 100%); /* W3C */
 }
 
 /* header start */
-
-header{
-    height: 10%;
-    background: #a0a0a0;
+.generalHeader{
+    height: 5%;
+    padding-right: 35px;
+    color: #7c7c7c;
+    text-align: right;
+    font-size: 11pt;
+    background: #242424;
 }
-header .topCol{
-    height: 50%;
-    background: #000;
+.generalHeader .spacer{
+    height: 100%;
+}
+.generalHeader *{
+    display: inline-block;
+    vertical-align: middle;
+}
+.general_menu {
+    text-align: right;
+}
+.general_menu li{
+    display: inline-block;
+    font-size: 28pt;
+    color: #252525;
+    text-shadow: 3px 3px 5px #777;
+    margin: auto 3% auto auto;
+}
+.general_menu li.active{
+    font-weight: bold;
 }
 
 /* header end*/
 
-article{
-    height: 80%;
-    background: #a0a0a0;
+/* article start */
+.generalArticle{
+    position: relative;
+    height: 85%;
+    overflow: hidden;
+}
+/* Time Line */
+.timeLine{
+    width: 100%;
+    height: 105px;
+    overflow: hidden;
+    white-space: nowrap;
+    background: url("images/bckg_timeline.png") repeat-x center;
+}
+.timeLine *{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.timeLine div:not([class="between"]):hover{
+    cursor: pointer;
+    background-position: right;
+}
+.timeLine .prev{
+    width: 53px;
+    background: url("images/prev.png") no-repeat left;
+    border-radius: 0 50px 50px 0;
+    margin-right: 80px;
+}
+.timeLine .date{
+    width: 102px;
+    background: url("images/date.png") no-repeat left;
+    border-radius: 55px;
+}
+.timeLine .between{
+    height: 50%;
+    width: 51px;
+    background: url("images/date.png") no-repeat left;
+    border-radius: 55px;
+    margin: auto 200px auto 200px;
 }
 
-footer{
-    height: 11%;
-    background: #000;
+/* Posts */
+.generalArticle .latest{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    border-left: 2px dotted #8d9f9a;
+    overflow: hidden;
+    padding: 20px;
 }
+.generalArticle .latest .preview{
+    width: 30%;
+    margin-right: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.generalArticle .latest article{
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.secondPost{
+    max-height: 30%;
+    margin: 4% auto 0 745px;
+}
+.bottomCol{
+    width: 100%;
+    height: 30%;
+    white-space: nowrap;
+}
+.firstPost{
+    white-space: normal;
+    margin: 0 auto auto 190px;
+}
+.thirdPost{
+    position: absolute;
+    /*margin: 0 auto auto 350px;*/
+    left: 1310px;
+    white-space: normal;
+}
+.next{
+    right: 0;
+}
+/* article end */
+
+/* footer start */
+.generalFooter{
+    height: 10%;
+    background: #252525;
+    clear: right;
+}
+
+/* footer end */
