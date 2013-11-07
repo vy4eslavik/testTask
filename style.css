@@ -55,6 +55,9 @@ nav ul{
 nav ul li{
     list-style-type: none;
 }
+.spacer{
+    height: 100%;
+}
 /* general end */
 
 /* left Col start */
@@ -96,9 +99,9 @@ nav ul li{
 /* ----------- right Col start ----------- */
 
 .rightCol{
-    width: 100%;
+    float: right;
+    width: 85%;
     height: 100%;
-
     background: #d5d5d5; /* Old browsers */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d5d5d5), color-stop(100%,#a9a9a9)); /* Chrome,Safari4+ */
     background: -webkit-radial-gradient(center, ellipse cover,  #d5d5d5 0%,#a9a9a9 100%); /* Chrome10+,Safari5.1+ */
@@ -114,9 +117,6 @@ nav ul li{
     text-align: right;
     font-size: 11pt;
     background: #242424;
-}
-.generalHeader .spacer{
-    height: 100%;
 }
 .generalHeader *{
     display: inline-block;
@@ -146,6 +146,7 @@ nav ul li{
 }
 /* Time Line */
 .timeLine{
+    position: relative;
     width: 100%;
     height: 105px;
     overflow: hidden;
@@ -179,6 +180,13 @@ nav ul li{
     background: url("images/date.png") no-repeat left;
     border-radius: 55px;
     margin: auto 200px auto 200px;
+}
+.timeLine .next{
+    position: absolute;
+    right: 0;
+    width: 53px;
+    background: url("images/next.png") no-repeat left;
+    border-radius: 50px 0 0 50px;
 }
 
 /* Posts */
@@ -227,9 +235,16 @@ nav ul li{
 
 /* footer start */
 .generalFooter{
+    padding-left: 20px;
     height: 10%;
     background: #252525;
     clear: right;
+    font-size: 9pt;
+    color: #6e6e6e;
+}
+.generalFooter div{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* footer end */
