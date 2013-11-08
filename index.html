@@ -9,16 +9,18 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="media_queries.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
+
+    <script src="scripts/jQuery.js"></script>
+    <script src="scripts/index.js"></script>
 
 </head>
 <body>
 
 <aside class="leftCol">
 
-    <img class="logo" width="100%" src="images/logo.jpg" alt="logo"/>
+    <img class="logo" src="images/logo.jpg" alt="logo" />
 
     <nav>
         <ul class="leftCol_menu">
@@ -66,29 +68,32 @@
                     <li><a href="#">Endorsements</a></li>
                 </ul>
             </nav>
-
-        <section class="latest secondPost">
-            <img class="preview" src="images/secondarticle.jpg"/>
-            <article>
-            <h3>Latest Blog</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat.
-            </article>
-        </section>
+        <div class="news_topCol">
+            <section class="latest secondPost">
+                <div class="spacer"></div>
+                <img class="preview" src="images/secondarticle.jpg"/>
+                <article>
+                <h3>Latest Blog</h3>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </article>
+            </section>
+        </div>
 
         <section class="timeLine">
             <div class="prev"></div>
-            <div class="first date"></div>
-            <div class="between"></div>
-            <div class="second date"></div>
-            <div class="between"></div>
-            <div class="third date"></div>
+            <div class="date first "><span>4<br/>June</span></div>
+            <div class="between first"></div>
+            <div class="date second"><span>12<br/>Oct</span></div>
+            <div class="between second"></div>
+            <div class="date third"><span>21<br/>Feb</span></div>
             <div class="next"></div>
         </section>
 
-        <div class="bottomCol">
+        <div class="news_bottomCol">
             <section class="latest firstPost">
+                <div class="spacer"></div>
                 <img class="preview" src="images/firstarticle.jpg"/>
                 <article>
                 <h3>Latest Article</h3>
@@ -97,8 +102,9 @@
                     aliquip ex ea commodo consequat.
                 </article>
             </section>
-
+<div class="spacer"></div>
             <section class="latest thirdPost">
+                <div class="spacer"></div>
                 <article>
                     <h3>Latest Video</h3>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
@@ -113,7 +119,7 @@
         <div class="spacer"></div>
         <div>
             <img class="logo" src="images/logo_footer.jpg" alt="logo" />
-            <br/>&copy;&nbsp;2013 New Horizons, 36&nbsp;Langham Street, London WIW7AP, Charity No: 119746</p>
+            <br/>&copy;&nbsp;2013 New Horizons, 36&nbsp;Langham Street, London WIW7AP, Charity No: 119746
         </div>
     </footer>
 </section>

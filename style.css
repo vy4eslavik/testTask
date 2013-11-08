@@ -9,6 +9,9 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial;
+
+    min-width: 1225px;
+    min-height: 625px;
 }
 a{
     text-decoration: none;
@@ -18,7 +21,8 @@ a:hover{
     text-decoration: underline;
 }
 h3{
-    font-size: 22pt;
+    font-size: 24pt;
+    font-weight: normal;
     margin: auto auto 10px auto;
 }
 .pipeAfter:after{
@@ -33,6 +37,7 @@ h3{
     height: 16px;
     margin-left: 10px;
     background: url("images/search.png") no-repeat left;
+    border-radius: 10px 0 10px 0;
 }
 .searchIcon:hover{
     background-position: right;
@@ -62,6 +67,7 @@ nav ul li{
 
 /* left Col start */
 .leftCol{
+    position: relative;
     text-align: center;
     float: left;
     width: 15%;
@@ -69,10 +75,15 @@ nav ul li{
     background: #fff;
 }
 .leftCol .logo{
-    margin-top: 30%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
 }
-.leftCol .leftCol_menu{
-    margin-top: 25%;
+.leftCol nav{
+    position: absolute;
+    width: 100%;
+    top: 35%;
     color: #818286;
     font-size: 12pt;
 }
@@ -80,25 +91,29 @@ nav ul li{
     margin-top: 8%;
 }
 .leftCol .leftCol_menu li:last-of-type{
-    margin-top: 40%;
+    margin-top: 20%;
 }
 .leftCol_menu .active{
     text-decoration: underline;
 }
 .leftCol .leftCol_footer{
-    margin-top: 40%;
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
     font-size: 14pt;
     color: #252525;
 }
 .leftCol .social img{
     display: inline-block;
-    margin: 15px 5px 0 0;
+    margin-top: 10px;
+    /*margin: 15px 5px 0 0;*/
 }
 /* left Col end */
 
 /* ----------- right Col start ----------- */
 
 .rightCol{
+    position: relative;
     float: right;
     width: 85%;
     height: 100%;
@@ -112,6 +127,7 @@ nav ul li{
 /* header start */
 .generalHeader{
     height: 5%;
+    min-height: 25px;
     padding-right: 35px;
     color: #7c7c7c;
     text-align: right;
@@ -122,20 +138,6 @@ nav ul li{
     display: inline-block;
     vertical-align: middle;
 }
-.general_menu {
-    text-align: right;
-}
-.general_menu li{
-    display: inline-block;
-    font-size: 28pt;
-    color: #252525;
-    text-shadow: 3px 3px 5px #777;
-    margin: auto 3% auto auto;
-}
-.general_menu li.active{
-    font-weight: bold;
-}
-
 /* header end*/
 
 /* article start */
@@ -144,22 +146,36 @@ nav ul li{
     height: 85%;
     overflow: hidden;
 }
+.general_menu {
+    text-align: right;
+}
+.general_menu li{
+    display: inline-block;
+    font-size: 28pt;
+    color: #252525;
+    text-shadow: 3px 3px 5px #777;
+    margin: 1% 2.5% auto auto;
+}
+.general_menu li.active{
+    font-weight: bold;
+}
 /* Time Line */
 .timeLine{
     position: relative;
     width: 100%;
-    height: 105px;
+    height: 100px;
     overflow: hidden;
     white-space: nowrap;
     background: url("images/bckg_timeline.png") repeat-x center;
 }
 .timeLine *{
-    position: relative;
     display: inline-block;
     vertical-align: middle;
     height: 100%;
 }
-.timeLine div:not([class="between"]):hover{
+.timeLine .prev:hover,
+.timeLine .date:hover,
+.timeLine .next:hover{
     cursor: pointer;
     background-position: right;
 }
@@ -167,19 +183,45 @@ nav ul li{
     width: 53px;
     background: url("images/prev.png") no-repeat left;
     border-radius: 0 50px 50px 0;
-    margin-right: 80px;
 }
 .timeLine .date{
+    position: absolute;
     width: 102px;
     background: url("images/date.png") no-repeat left;
     border-radius: 55px;
 }
+.timeLine .date span{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 24pt;
+    padding-top: 10px;
+}
 .timeLine .between{
-    height: 50%;
+    position: absolute;
+    top: 27px;
+    height: 51px;
     width: 51px;
     background: url("images/date.png") no-repeat left;
     border-radius: 55px;
-    margin: auto 200px auto 200px;
+}
+
+.timeLine .date.first{
+    left: 10%;
+}
+.timeLine .between.first{
+    left: 30%;
+}
+.timeLine .date.second{
+    left: 47%;
+}
+.timeLine .between.second{
+    /*left: 67%;*/
+    right: 30%;
+}
+.timeLine .date.third{
+    /*left: 84%;*/
+    right: 10%;
 }
 .timeLine .next{
     position: absolute;
@@ -191,58 +233,83 @@ nav ul li{
 
 /* Posts */
 .generalArticle .latest{
-    display: inline-block;
     width: 45%;
-    vertical-align: top;
+    height: 100%;
     border-left: 2px dotted #8d9f9a;
     overflow: hidden;
-    padding: 20px;
+}
+.generalArticle .latest .spacer{
+    width: 3%;
+}
+.generalArticle .latest *:not(H3){
+    display: inline-block;
+    vertical-align: middle;
 }
 .generalArticle .latest .preview{
-    width: 30%;
-    margin-right: 20px;
+    width: 25%;
     vertical-align: middle;
     display: inline-block;
+    margin-right: 3%;
 }
 .generalArticle .latest article{
-    width: 65%;
     display: inline-block;
+    width: 65%;
     vertical-align: middle;
 }
-.secondPost{
-    max-height: 30%;
-    margin: 4% auto 0 745px;
+.news_topCol{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    margin: 2% auto 0 auto;
 }
-.bottomCol{
+.secondPost{
+    position: absolute;
+    left: 47%;
+    bottom: 0;
+    margin: auto auto 0 51px;
+}
+.news_bottomCol{
+    position: relative;
     width: 100%;
     height: 30%;
     white-space: nowrap;
 }
 .firstPost{
+    position: absolute;
+    left: 10%;
     white-space: normal;
-    margin: 0 auto auto 190px;
+    margin: 0 auto auto 51px;
+}
+.news_bottomCol > .spacer{
+    position: absolute;
+    right: 10%;
+    border-left: 2px dotted #8d9f9a;
+    margin: 0 51px auto auto;
 }
 .thirdPost{
     position: absolute;
-    /*margin: 0 auto auto 350px;*/
-    left: 1310px;
+    /*left: 84%;*/
+    right: -32%;
     white-space: normal;
-}
-.next{
-    right: 0;
+    margin: 0 auto auto 51px;
+    border-left: none !important;
 }
 /* article end */
 
 /* footer start */
 .generalFooter{
-    padding-left: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: 10%;
+    min-height: 80px;
     background: #252525;
     clear: right;
     font-size: 9pt;
     color: #6e6e6e;
 }
 .generalFooter div{
+    margin-left: 20px;
     display: inline-block;
     vertical-align: middle;
 }
