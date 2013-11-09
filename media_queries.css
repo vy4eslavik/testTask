@@ -1,0 +1,154 @@
+/*  Large screen - default  */
+
+/*  Medium screen   */
+@media screen and (max-height: 610px) {
+    body{
+        min-height: 540px;
+        min-width: 790px;
+    }
+    .leftCol .logo{
+        top: 5%;
+    }
+    .leftCol nav{
+        top: 32%;
+    }
+    .leftCol .leftCol_menu li{
+        margin-top: 10px;
+    }
+    .news_topCol,
+    .news_bottomCol{
+        height: 35%;
+    }
+    .general_menu{
+        margin-top: 1%;
+        font-size: 20pt;
+        margin-bottom: 0;
+    }
+    .timeLine{
+        height: 50px;
+    }
+    .timeLine .prev,
+    .timeLine .next{
+        width: 27px;
+        background-size: 200%;
+    }
+    .timeLine .date{
+        width: 51px;
+    }
+    .timeLine .date span{
+        font-size: 12pt;
+    }
+    .timeLine .between{
+        top: 13px;
+        width: 25px;
+        height: 25px;
+    }
+    .firstPost{
+        margin-left: 25px;
+    }
+    .secondPost{
+        margin-left: 25px;
+    }
+    .news_bottomCol > .spacer{
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width: 1270px) {
+    body{
+        min-height: 540px;
+        min-width: 790px;
+    }
+    .general_menu{
+        margin-top: 1%;
+        font-size: 18pt;
+        margin-bottom: 0;
+    }
+    .news_topCol,
+    .news_bottomCol{
+        height: 40%;
+    }
+    .generalArticle .latest{
+        width: 47%;
+    }
+    .timeLine{
+        height: 50px;
+    }
+    .timeLine .prev,
+    .timeLine .next{
+        width: 27px;
+        background-size: 200%;
+    }
+    .timeLine .date{
+        width: 51px;
+    }
+    .timeLine .date span{
+        font-size: 12pt;
+    }
+    .timeLine .between{
+        top: 13px;
+        width: 25px;
+        height: 25px;
+    }
+    .timeLine .date.first{
+        left: 5%;
+    }
+    .firstPost{
+        left: 5%;
+        width: 65% !important;
+        margin-left: 25px;
+    }
+    .secondPost{
+        margin-left: 25px;
+    }
+    .news_bottomCol > .spacer{
+        margin-right: 25px;
+    }
+    .thirdPost{
+        width: 65% !important;
+        right: -55%;
+    }
+}
+
+/*  small screen    */
+@media screen and (max-width: 960px) and (max-height: 600px){
+    h3{
+        font-size: 14pt;
+    }
+    .news_topCol{
+        height: 45%;
+    }
+    .news_bottomCol{
+        height: 35%;
+    }
+}
+
+/*  very small screen   */
+@media screen and (max-width: 400px) {
+    .general_menu{
+        white-space: normal;
+    }
+    .generalArticle {
+        height: auto;
+        background: #bababa;
+    }
+    .news_topCol,
+    .news_bottomCol{
+        height: auto;
+    }
+    .firstPost,
+    .secondPost{
+        position: relative;
+    }
+    .news_bottomCol .thirdPost{
+        right: -350px;
+    }
+
+    .firstPost img, .firstPost article,
+    .secondPost img, .secondPost article{
+        display: block !important;
+        margin-left: 10px;
+    }
+    .generalFooter{
+        position: relative;
+    }
+}

@@ -9,9 +9,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: Arial;
-
-    min-width: 1225px;
-    min-height: 625px;
 }
 a{
     text-decoration: none;
@@ -23,14 +20,14 @@ a:hover{
 h3{
     font-size: 24pt;
     font-weight: normal;
-    margin: auto auto 10px auto;
+    margin: 0 auto 10px auto;
 }
 .pipeAfter:after{
-    margin: 0 20px 0 20px;
+    margin: 0 15px 0 20px;
     width: 1px;
     height: 22px;
-    content: " ";
-    border-left: 1px solid #656565;
+    content: "";
+    border: 1px solid #656565;
 }
 .searchIcon{
     width: 16px;
@@ -96,7 +93,7 @@ nav ul li{
 .leftCol_menu .active{
     text-decoration: underline;
 }
-.leftCol .leftCol_footer{
+.leftCol footer{
     position: absolute;
     width: 100%;
     bottom: 5%;
@@ -106,7 +103,6 @@ nav ul li{
 .leftCol .social img{
     display: inline-block;
     margin-top: 10px;
-    /*margin: 15px 5px 0 0;*/
 }
 /* left Col end */
 
@@ -143,18 +139,21 @@ nav ul li{
 /* article start */
 .generalArticle{
     position: relative;
-    height: 85%;
+    height: 87%;
     overflow: hidden;
 }
 .general_menu {
+    width: 100%;
+    font-size: 28pt;
     text-align: right;
+    margin-top: 2%;
+    white-space: nowrap;
+    color: #252525;
+    text-shadow: 3px 3px 5px #777;
 }
 .general_menu li{
     display: inline-block;
-    font-size: 28pt;
-    color: #252525;
-    text-shadow: 3px 3px 5px #777;
-    margin: 1% 2.5% auto auto;
+    margin-right: 2.5%;
 }
 .general_menu li.active{
     font-weight: bold;
@@ -174,7 +173,6 @@ nav ul li{
     height: 100%;
 }
 .timeLine .prev:hover,
-.timeLine .date:hover,
 .timeLine .next:hover{
     cursor: pointer;
     background-position: right;
@@ -187,22 +185,26 @@ nav ul li{
 .timeLine .date{
     position: absolute;
     width: 102px;
-    background: url("images/date.png") no-repeat left;
+    background: #252525;
     border-radius: 55px;
+}
+.timeLine .date:hover{
+    cursor: pointer;
+    background: #333;
 }
 .timeLine .date span{
     width: 100%;
     text-align: center;
     color: #fff;
     font-size: 24pt;
-    padding-top: 10px;
+    padding-top: 10%;
 }
 .timeLine .between{
     position: absolute;
     top: 27px;
     height: 51px;
     width: 51px;
-    background: url("images/date.png") no-repeat left;
+    background: #252525;
     border-radius: 55px;
 }
 
@@ -216,11 +218,9 @@ nav ul li{
     left: 47%;
 }
 .timeLine .between.second{
-    /*left: 67%;*/
     right: 30%;
 }
 .timeLine .date.third{
-    /*left: 84%;*/
     right: 10%;
 }
 .timeLine .next{
@@ -232,12 +232,6 @@ nav ul li{
 }
 
 /* Posts */
-.generalArticle .latest{
-    width: 45%;
-    height: 100%;
-    border-left: 2px dotted #8d9f9a;
-    overflow: hidden;
-}
 .generalArticle .latest .spacer{
     width: 3%;
 }
@@ -246,27 +240,27 @@ nav ul li{
     vertical-align: middle;
 }
 .generalArticle .latest .preview{
-    width: 25%;
-    vertical-align: middle;
-    display: inline-block;
+    max-width: 25%;
+    max-height: 100%;
     margin-right: 3%;
 }
 .generalArticle .latest article{
-    display: inline-block;
-    width: 65%;
-    vertical-align: middle;
+    width: 66%;
 }
 .news_topCol{
     position: relative;
     width: 100%;
     height: 30%;
-    margin: 2% auto 0 auto;
+    margin: 1% auto 0 auto;
 }
 .secondPost{
+    width: 40%;
+    height: 100%;
     position: absolute;
     left: 47%;
     bottom: 0;
-    margin: auto auto 0 51px;
+    margin-left: 51px;
+    border-left: 2px dotted #8d9f9a;
 }
 .news_bottomCol{
     position: relative;
@@ -275,24 +269,28 @@ nav ul li{
     white-space: nowrap;
 }
 .firstPost{
+    width: 40%;
+    height: 100%;
     position: absolute;
     left: 10%;
     white-space: normal;
-    margin: 0 auto auto 51px;
+    margin-left: 51px;
+    border-left: 2px dotted #8d9f9a;
 }
 .news_bottomCol > .spacer{
     position: absolute;
     right: 10%;
+    top: 0;
     border-left: 2px dotted #8d9f9a;
-    margin: 0 51px auto auto;
+    margin-right: 51px;
 }
 .thirdPost{
     position: absolute;
-    /*left: 84%;*/
-    right: -32%;
+    width: 40%;
+    height: 100%;
+    right: -27%;
+    top: 0;
     white-space: normal;
-    margin: 0 auto auto 51px;
-    border-left: none !important;
 }
 /* article end */
 
@@ -302,16 +300,23 @@ nav ul li{
     bottom: 0;
     width: 100%;
     height: 10%;
-    min-height: 80px;
+    min-height: 30px;
     background: #252525;
     clear: right;
     font-size: 9pt;
     color: #6e6e6e;
 }
-.generalFooter div{
-    margin-left: 20px;
-    display: inline-block;
-    vertical-align: middle;
+.generalFooter img{
+    position: absolute;
+    height: 60%;
+    top: 0;
+    left: 50px;
+    margin: 0;
 }
-
+.generalFooter p{
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    margin: 0;
+}
 /* footer end */
