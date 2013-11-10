@@ -43,10 +43,10 @@
         width: 25px;
         height: 25px;
     }
-    .firstPost{
+    .latest.article{
         margin-left: 25px;
     }
-    .secondPost{
+    .latest.blog{
         margin-left: 25px;
     }
     .news_bottomCol > .spacer{
@@ -89,21 +89,21 @@
         width: 25px;
         height: 25px;
     }
-    .timeLine .date.first{
+    .timeLine .date.article{
         left: 5%;
     }
-    .firstPost{
+    .latest.article{
         left: 5%;
         width: 65% !important;
         margin-left: 25px;
     }
-    .secondPost{
+    .latest.blog{
         margin-left: 25px;
     }
     .news_bottomCol > .spacer{
         margin-right: 25px;
     }
-    .thirdPost{
+    .latest.video{
         width: 65% !important;
         right: -55%;
     }
@@ -135,16 +135,16 @@
     .news_bottomCol{
         height: auto;
     }
-    .firstPost,
-    .secondPost{
+    .latest.article,
+    .latest.blog{
         position: relative;
     }
-    .news_bottomCol .thirdPost{
+    .news_bottomCol .latest.video{
         right: -350px;
     }
 
-    .firstPost img, .firstPost article,
-    .secondPost img, .secondPost article{
+    .latest.article img, .latest.article article,
+    .latest.blog img, .latest.blog article{
         display: block !important;
         margin-left: 10px;
     }

@@ -90,7 +90,7 @@ nav ul li{
 .leftCol .leftCol_menu li:last-of-type{
     margin-top: 20%;
 }
-.leftCol_menu .active{
+.leftCol_menu .current_page_item{
     text-decoration: underline;
 }
 .leftCol footer{
@@ -141,7 +141,6 @@ nav ul li{
     position: relative;
     height: 87%;
     overflow: hidden;
-    zoom: 1;
 }
 .general_menu {
     width: 100%;
@@ -156,7 +155,7 @@ nav ul li{
     display: inline-block;
     margin-right: 2.5%;
 }
-.general_menu li.active{
+.general_menu .current_page_item{
     font-weight: bold;
 }
 /* Time Line */
@@ -209,19 +208,19 @@ nav ul li{
     border-radius: 55px;
 }
 
-.timeLine .date.first{
+.timeLine .date.article{
     left: 10%;
 }
 .timeLine .between.first{
     left: 30%;
 }
-.timeLine .date.second{
+.timeLine .date.blog{
     left: 47%;
 }
 .timeLine .between.second{
     right: 30%;
 }
-.timeLine .date.third{
+.timeLine .date.video{
     right: 10%;
 }
 .timeLine .next{
@@ -244,7 +243,7 @@ nav ul li{
 }
 .generalArticle .latest .preview{
     max-width: 25%;
-    max-height: 100%;
+    height: auto;
     margin-right: 3%;
 }
 .generalArticle .latest article{
@@ -256,7 +255,7 @@ nav ul li{
     height: 30%;
     margin: 1% auto 0 auto;
 }
-.secondPost{
+.latest.blog{
     width: 40%;
     height: 100%;
     position: absolute;
@@ -271,7 +270,7 @@ nav ul li{
     height: 30%;
     white-space: nowrap;
 }
-.firstPost{
+.latest.article{
     width: 40%;
     height: 100%;
     position: absolute;
@@ -287,7 +286,7 @@ nav ul li{
     border-left: 2px dotted #8d9f9a;
     margin-right: 51px;
 }
-.thirdPost{
+.latest.video{
     position: absolute;
     width: 40%;
     height: 100%;
