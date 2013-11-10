@@ -43,7 +43,7 @@ h3{
 .searchInput{
     height: 15px;
     width: 150px;
-    padding-left: 5px;
+    padding: 0 0 0 5px;
     font-family: inherit;
     font-size: 11pt;
     color: inherit;
@@ -64,11 +64,11 @@ nav ul li{
 
 /* left Col start */
 .leftCol{
+    height:100%;
     position: relative;
     text-align: center;
     float: left;
     width: 15%;
-    height: 100%;
     background: #fff;
 }
 .leftCol .logo{
@@ -141,6 +141,7 @@ nav ul li{
     position: relative;
     height: 87%;
     overflow: hidden;
+    zoom: 1;
 }
 .general_menu {
     width: 100%;
@@ -235,7 +236,9 @@ nav ul li{
 .generalArticle .latest .spacer{
     width: 3%;
 }
-.generalArticle .latest *:not(H3){
+.generalArticle .latest .spacer,
+.generalArticle .latest img,
+.generalArticle .latest article{
     display: inline-block;
     vertical-align: middle;
 }
