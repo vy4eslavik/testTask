@@ -3,13 +3,8 @@
  * User: vy4eslavik
  * Date: 10.11.13
  *
- * The Header for our theme.
+ * The Header theme.
  *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
  */
 ?>
 
@@ -38,7 +33,7 @@
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <script src="<?php echo get_template_directory_uri(); ?>/scripts/jQuery.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>scripts/index.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/scripts/index.js"></script>
 
 </head>
 <body <?php body_class(); ?>>
@@ -52,7 +47,7 @@
             'depth'     => 1)
         ); ?>
 
-        <footer>
+        <footer class="leftCol-footer">
             <span class="pipeAfter"><a href="#">About</a></span>
             <a href="#">Contact</a>
 
@@ -72,5 +67,8 @@
             <span class="pipeAfter"><a href="#">Stay in touch</a></span>
             <span class="pipeAfter"><a href="#">Donate</a></span>
 
-            <?php searchForm(); ?>
+            <form method="get" name="searchform" id="searchform">
+                <input type="text" name="s" id="s" class="searchInput" value="Search"/>
+                <div onclick="document.forms['searchform'].submit();" class="searchIcon"></div>
+            </form>
         </header>

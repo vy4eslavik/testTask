@@ -5,6 +5,7 @@
  * Time: 17:37
  */
 
+//  Setup Them
 if (function_exists('add_theme_support')) {
     // Add menu
     add_theme_support('menus');
@@ -18,31 +19,23 @@ if (function_exists('add_theme_support')) {
     ));
 
     // Post thumbnails
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('post-thumbnails');
     set_post_thumbnail_size(200, 200);
 }
 
-// Search form
-function searchForm( $form ) {
-    $form = '
-        <form method="get" name="searchform" id="searchform">
-        <input type="text" name="s" id="s" class="searchInput" value="Search"/>
-        <div onclick="document.forms[\'searchform\'].submit();" class="searchIcon"></div>
-        </form>
-    ';
-    echo $form;
-}
+//  Template page "Whats New"
+class whatsNew{
+    public function dateReformat($date){
+        echo(date('j',strtotime($date)).
+            '<br/>'.
+            date('M',strtotime($date)));
+    }
 
-function dateReformat($date){
-    echo(date('j',strtotime($date)).
-        '<br/>'.
-        date('M',strtotime($date)));
-}
-
-function contentThumb($str){
-    if(strlen($str) > 230){
-        echo(mb_substr($str, 0, 230).'...');
-    }else{
-        echo $str;
+    public function contentThumb($str){
+        if(strlen($str) > 230){
+            echo(mb_substr($str, 0, 230).'...');
+        }else{
+            echo $str;
+        }
     }
 }
